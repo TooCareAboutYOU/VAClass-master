@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.dts.vaclass.ui.activity.BottomSheetActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <Button
+            android:id="@+id/btn_open"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="完全展开"/>
+        <Button
+            android:id="@+id/btn_hide"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="完全隐藏"/>
+        <Button
+            android:id="@+id/btn_show_dialog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="弹出Dialog"/>
+        <Button
+            android:id="@+id/btn_hide_dialog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="隐藏Dialog"/>
+        <Button
+            android:id="@+id/btn_show_bsdialog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="显示BottomSheetsFragment"/>
+        <Button
+            android:id="@+id/btn_hide_bsdialog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="隐藏BottomSheetsFragment"/>
+    </LinearLayout>
+
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/nsview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:behavior_hideable="true"
+        app:behavior_peekHeight="48dp"
+        app:layout_behavior="@string/bottom_sheet_behavior">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:divider="@android:drawable/divider_horizontal_bright"
+            android:showDividers="middle">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@android:color/holo_blue_dark"
+                android:gravity="center"
+                android:textColor="@android:color/white"
+                android:text="目录一"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@android:color/holo_blue_dark"
+                android:gravity="center"
+                android:textColor="@android:color/white"
+                android:text="目录二"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@android:color/holo_blue_dark"
+                android:gravity="center"
+                android:textColor="@android:color/white"
+                android:text="目录三"/>
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</android.support.design.widget.CoordinatorLayout>
